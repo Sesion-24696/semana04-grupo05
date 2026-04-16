@@ -1,12 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>La Sazon de Nicolasa</title>
+    <title>Sabor & Arte | Menú</title>
+    <style>
+        /* Estilos Generales */
+        :root {
+            --dorado: #c5a059;
+            --oscuro: #1a1a1a;
+            --blanco: #ffffff;
+            --gris-claro: #f4f4f4;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--gris-claro);
+            color: var(--oscuro);
+        }
+
+        header {
+            background-color: var(--oscuro);
+            color: var(--blanco);
+            padding: 2rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--dorado);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        /* Navegación de Categorías */
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-cat {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--dorado);
+            background: transparent;
+            color: var(--oscuro);
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+            border-radius: 20px;
+        }
+
+        .btn-cat:hover {
+            background: var(--dorado);
+            color: white;
+        }
+
+        /* Sección de Menú */
+        .menu-section {
+            margin-bottom: 4rem;
+        }
+
+        .section-title {
+            text-align: center;
+            border-bottom: 2px solid var(--dorado);
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding-bottom: 5px;
+        }
+
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        /* Tarjeta de Platillo */
+        .dish-card {
+            background: var(--blanco);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .dish-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dish-info {
+            padding: 1.5rem;
+        }
+
+        .dish-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .dish-name {
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: bold;
+        }
+
+        .dish-price {
+            color: var(--dorado);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .dish-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--oscuro);
+            color: white;
+            margin-top: 4rem;
+        }
+
+        /* Animación simple */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .menu-section {
+            animation: fadeIn 1s ease-in;
+        }
+    </style>
 </head>
 <body>
-    
+
+    <header>
+        <h1>SABOR & ARTE</h1>
+        <p>Experiencia Gourmet en cada bocado</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="categories">
+            <button class="btn-cat">Entradas</button>
+            <button class="btn-cat">Fuertes</button>
+            <button class="btn-cat">Postres</button>
+            <button class="btn-cat">Vinos</button>
+        </div>
+
+        <section class="menu-section">
+            <center><h2 class="section-title">ENTRADAS</h2></center>
+            <div class="grid-menu">
+                
+                <div class="dish-card">
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Bruschetta de Tomate</h3>
+                            <span class="dish-price">$12</span>
+                        </div>
+                        <p class="dish-description">Pan artesanal tostado con tomates cherry, albahaca fresca, ajo y un toque de aceite de oliva virgen.</p>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Carpaccio de Res</h3>
+                            <span class="dish-price">$18</span>
+                        </div>
+                        <p class="dish-description">Láminas de filete de res, alcaparras, queso parmesano y emulsión de limón.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="menu-section">
+            <center><h2 class="section-title">PLATOS FUERTES</h2></center>
+            <div class="grid-menu">
+                
+                <div class="dish-card">
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Salmón al Eneldo</h3>
+                            <span class="dish-price">$28</span>
+                        </div>
+                        <p class="dish-description">Salmón fresco a la parrilla sobre una cama de espárragos y puré de coliflor cremoso.</p>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Risotto de Hongos</h3>
+                            <span class="dish-price">$24</span>
+                        </div>
+                        <p class="dish-description">Arroz arborio cocinado a fuego lento con una mezcla de hongos silvestres y aceite de trufa.</p>
+                    </div>
+                </div>
+
+                <div class="dish-card">
+                    <div class="dish-info">
+                        <div class="dish-header">
+                            <h3 class="dish-name">Corte New York</h3>
+                            <span class="dish-price">$35</span>
+                        </div>
+                        <p class="dish-description">350g de carne premium, acompañado de papas rústicas y mantequilla de hierbas.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sabor & Arte Restaurante. Abierto de Martes a Domingo.</p>
+    </footer>
+
 </body>
 </html>
