@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>L'Essence - Sensory Menu</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#b55d00",
+                        "surface-variant": "#e9e2d3",
+                        "surface": "#fff8ef",
+                        "on-surface-variant": "#594238",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "secondary": "#4e6073",
+                        "surface-container": "#f5edde",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#091d2e",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "secondary-fixed": "#d1e4fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "surface-container-highest": "#e9e2d3",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1e1b13",
+                        "primary-container": "#c64f00",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1e1b13",
+                        "background": "#fff8ef",
+                        "primary-fixed-dim": "#ffb595",
+                        "surface-container-high": "#efe7d9",
+                        "on-primary-fixed": "#351000",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "surface-dim": "#e1d9cb",
+                        "inverse-surface": "#343026",
+                        "on-tertiary-container": "#fffbff",
+                        "outline": "#8c7166",
+                        "inverse-on-surface": "#f8f0e1",
+                        "primary-fixed": "#ffdbcd",
+                        "secondary-container": "#cfe2f9",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "tertiary": "#904800",
+                        "tertiary-fixed": "#ffdcc5",
+                        "on-secondary-container": "#526478",
+                        "inverse-primary": "#ffb595",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b5c8df",
+                        "outline-variant": "#e0c0b2",
+                        "on-tertiary-fixed": "#301400",
+                        "primary": "#9e3d00",
+                        "surface-tint": "#a23f00",
+                        "surface-bright": "#fff8ef",
+                        "surface-container-low": "#fbf3e4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopAppBar -->
+    <header class="w-full top-0 sticky bg-[#fff8ef] dark:bg-stone-950 z-50">
+        <div class="flex justify-between items-center px-6 py-4 w-full">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 rounded-full bg-surface-container overflow-hidden border border-outline-variant/20">
+                    <img alt="User profile photo" class="w-full h-full object-cover"
+                        data-alt="Close-up portrait of a sophisticated person in a warm lit dining room, high-end editorial style photography"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1HWGVG6uMxRQyw-x4WuUYe8NeRraUqxFj9AKeauHt2lUvquQGebhopgQbpSbtCWxsQT7n51GmEXXcmNHKVOkiaaucjbqlQP6fuRiLuJEasMYI8yWJrUoXw9x8a8bGUeDwB-XBJxViQ0Ho4WRVX1ZMqumZGugyRTcDCx02qW7KJilJLaBkWPRqf5b6yNbGQ8YTz17SX4EAUO-JVlSF0IUazpqlmV7331wem3sd9wJby8BaK49w0pzLiYOXJmmParkCazaNq7OYINFi" />
+                </div>
+            </div>
+            <h1 class="text-2xl font-bold italic text-[#9e3d00] dark:text-orange-400 font-headline">L'Essence</h1>
+            <button
+                class="text-[#9e3d00] dark:text-orange-500 hover:opacity-80 transition-opacity active:duration-150 scale-95">
+                <span class="material-symbols-outlined" data-icon="search">search</span>
+            </button>
+        </div>
+    </header>
+    <main class="pb-32 px-6 max-w-2xl mx-auto">
+        <!-- Hero Section / Search -->
+        <section class="mt-8 mb-10">
+            <div class="relative group">
+                <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-outline">
+                    <span class="material-symbols-outlined text-lg">search</span>
+                </div>
+                <input
+                    class="w-full pl-12 pr-6 py-4 bg-surface-container-low border border-outline-variant/20 rounded-xl focus:outline-none focus:border-primary transition-all font-body text-on-surface placeholder:text-on-surface-variant/50"
+                    placeholder="Crave something exquisite?" type="text" />
+            </div>
+        </section>
+        <!-- Horizontal Categories Tabs -->
+        <nav
+            class="flex gap-4 overflow-x-auto hide-scrollbar pb-6 sticky top-[72px] bg-surface/95 backdrop-blur-md z-40 -mx-6 px-6">
+            <button
+                class="whitespace-nowrap px-6 py-2.5 bg-primary text-on-primary rounded-full font-label font-bold text-sm transition-all shadow-md">Appetizers</button>
+            <button
+                class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full font-label font-medium text-sm hover:bg-surface-container-highest transition-colors">Mains</button>
+            <button
+                class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full font-label font-medium text-sm hover:bg-surface-container-highest transition-colors">Desserts</button>
+            <button
+                class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full font-label font-medium text-sm hover:bg-surface-container-highest transition-colors">Drinks</button>
+            <button
+                class="whitespace-nowrap px-6 py-2.5 bg-surface-container-high text-on-surface-variant rounded-full font-label font-medium text-sm hover:bg-surface-container-highest transition-colors">Wine
+                List</button>
+        </nav>
+        <!-- Category Title -->
+        <div class="mt-4 mb-8">
+            <h2 class="font-headline text-4xl text-on-surface leading-tight">The Garden <br /><span
+                    class="italic text-primary">Starters</span></h2>
+            <div class="w-12 h-1 bg-tertiary mt-4 rounded-full"></div>
+        </div>
+        <!-- Food List (Vertical Cards) -->
+        <div class="space-y-12">
+            <!-- Dish Card 1: Bento Style Layout -->
+            <article class="flex flex-col gap-4 group">
+                <div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-sm">
+                    <img alt="Heirloom Tomato Salad"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Exquisite heirloom tomato salad with burrata cheese, fresh basil, and balsamic glaze on a ceramic plate, soft natural lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOHhiWM2vaDFi89y34iwbAvDM-lpEiNCamDA_ehvmrimuZ87idFrv5dJWEw8_pz8U_VY4X7E4HBJsRAHXI0baY7hWf32UqpWT2OBKoJacpDttOcVz2w8BEMkPJ45oUilUDFKlFrHz5SJHUFEdlR5B6uGBKtMpLJ1_CRAdtBgFRgoA0EFhKUt--mmTD44lOf6U_jrKp6UjDRTXw8c-2FcvVQ9DftqZa-hO_KrkYLIsrjKzH5AXRhGWT_HyJuqJtqgH3QglbImjNc6Ju" />
+                    <div
+                        class="absolute top-4 right-4 px-3 py-1 bg-surface/80 backdrop-blur-md rounded-full text-xs font-bold text-primary tracking-widest uppercase">
+                        Signature</div>
+                </div>
+                <div class="flex justify-between items-start pt-2">
+                    <div class="max-w-[70%]">
+                        <h3 class="font-body text-xl font-bold text-on-surface tracking-tight">Heirloom &amp; Burrata
+                        </h3>
+                        <p class="text-on-surface-variant text-sm mt-1 leading-relaxed">Artisan tomatoes, creamy Puglia
+                            burrata, cold-pressed basil oil, and crystal sea salt.</p>
+                    </div>
+                    <span class="font-headline text-xl text-primary">$24</span>
+                </div>
+            </article>
+            <!-- Dish Card 2: Minimalist -->
+            <article class="flex items-center gap-6 group">
+                <div class="w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden">
+                    <img alt="Velvety Truffle Soup"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="Close-up of a dark ceramic bowl filled with creamy truffle soup, garnished with microgreens and a swirl of dark oil"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-LEwewPsNJEjt6FCQCBYoNElY7WXsMHc8bAN0pnG-C7SDvnN6lRmVzSx8UDSbVvTmpRAfzpyCTMgeQGJeup6jpXSq8EPfqFh65TiUn7ASKTvx22linO6mLrPvGCTmqzBU6xUMrOh2G9rNn5tBi3WfEeX6NQL6n20Hq58gymhKS1CT0iF4CC7JgzWRNu_mZY4NUar0U7TXk1gMONCErlkcg1TOloP7Wx0iFsQW5pjCMsuEqPW0Q8fVUzTPr7D3XqiVo87veeigr0N5" />
+                </div>
+                <div class="flex-grow flex justify-between items-center border-b border-outline-variant/10 pb-6">
+                    <div>
+                        <h3 class="font-body text-lg font-bold text-on-surface">Black Truffle Velouté</h3>
+                        <p class="text-on-surface-variant text-xs mt-0.5 font-medium italic">Chef’s recommendation</p>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <span class="font-headline text-lg text-primary">$18</span>
+                        <button class="mt-2 text-primary hover:text-tertiary-container transition-colors">
+                            <span class="material-symbols-outlined text-xl"
+                                style="font-variation-settings: 'FILL' 1;">add_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+            <!-- Featured "Chef's Note" Overlay Section -->
+            <section class="relative bg-surface-container rounded-full p-8 overflow-hidden">
+                <div class="relative z-10">
+                    <div class="flex items-center gap-2 mb-3">
+                        <span class="material-symbols-outlined text-primary text-sm">restaurant</span>
+                        <span class="text-[10px] font-bold tracking-[0.2em] uppercase text-on-surface-variant">The
+                            Butcher's Cut</span>
+                    </div>
+                    <h3 class="font-headline text-2xl mb-2">Aged Wagyu Carpaccio</h3>
+                    <p class="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-xs">Paper-thin A5 Wagyu, shaved
+                        parmigiano-reggiano, and a touch of white truffle essence.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-headline text-2xl text-primary">$32</span>
+                        <button
+                            class="bg-primary text-on-primary px-8 py-3 rounded-full font-label font-bold text-sm shadow-lg shadow-primary/20 active:scale-95 transition-transform">Add
+                            to Order</button>
+                    </div>
+                </div>
+                <!-- Glassmorphic Accent -->
+                <div class="absolute -right-10 -bottom-10 w-48 h-48 bg-primary/5 rounded-full blur-3xl"></div>
+            </section>
+            <!-- Dish Card 3 -->
+            <article class="flex flex-col gap-4 group">
+                <div class="relative w-full aspect-[16/9] rounded-xl overflow-hidden shadow-sm">
+                    <img alt="Charred Octopus"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        data-alt="Grilled octopus tentacle with vibrant purple potato puree and lemon zest garnish on a designer plate"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa4mPGd2_1Ys1Z9ouqOapOgtIJo37P2IEfhcMKfop5q_9VH9eqELg2DuFnPxdaOCVsBn_EbnFJUNIXcOzd-q8uxRxjG63DnrZC6mtea3HQGbWvvXKsnUfVpgnU48UKUvw-yUNX5H-B2ZBU-IDjqQ3aExel6Sj7-Bw65YHGI9JSzd-dXnjp267JohlEyq1RB9aun57oZkSIkdX_azYZBGYg-Gju0P-zPNlbz3D_6HV2RW_hmpgRYzGRBR-hTrU_G-KpLwhmAt2cwwCq" />
+                </div>
+                <div class="flex justify-between items-start pt-2">
+                    <div class="max-w-[70%]">
+                        <h3 class="font-body text-xl font-bold text-on-surface tracking-tight">Charred Atlantic Octopus
+                        </h3>
+                        <p class="text-on-surface-variant text-sm mt-1 leading-relaxed">Smoked paprika, saffron aioli,
+                            and roasted fingerling potatoes.</p>
+                    </div>
+                    <span class="font-headline text-xl text-primary">$28</span>
+                </div>
+            </article>
+            <!-- Dish Card 4: Row with more details -->
+            <article class="flex items-center gap-6 group">
+                <div class="w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden">
+                    <img alt="Crispy Calamari"
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                        data-alt="Golden brown fried calamari rings served with a wedge of lemon and a small bowl of spicy marinara sauce"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbnrEvmU5N3qNtZk8ftvp00YPCq_PQu7cZRgFSqM-V8IH5mXPkzQhjOA99_57GIjvfh01LSV3f-uzOPYNWoJNS3L7kjYybWSVJAAcjtc4XDfUfp6vicJ_HbDSP-5fgfQntSQy2n6mR6qE25WmgmXjOWz1lsZN5clEGEt4HHlhLm23IH7o7em8gPIYdrcHwhQsIeqZ8FqluxAGstNnnhy-Sw_1OT75dD_Ew-M5RhBXXtiiPVvTe3DpyX7Ln9GdjAmuwJExRSoUYCoEX" />
+                </div>
+                <div class="flex-grow flex justify-between items-center border-b border-outline-variant/10 pb-6">
+                    <div>
+                        <h3 class="font-body text-lg font-bold text-on-surface">Crispy Point Judith Calamari</h3>
+                        <div class="flex gap-2 mt-1">
+                            <span
+                                class="px-2 py-0.5 bg-surface-container-high text-[9px] font-bold uppercase tracking-wider rounded text-on-surface-variant">Sustainable</span>
+                            <span
+                                class="px-2 py-0.5 bg-surface-container-high text-[9px] font-bold uppercase tracking-wider rounded text-on-surface-variant">Spicy</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end">
+                        <span class="font-headline text-lg text-primary">$21</span>
+                        <button class="mt-2 text-primary hover:text-tertiary-container transition-colors">
+                            <span class="material-symbols-outlined text-xl">add_circle</span>
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#fff8ef]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-8px_30px_rgba(30,27,19,0.06)] rounded-t-3xl">
+        <a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#9e3d00] transition-colors tap-highlight-transparent"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase">Home</span>
+        </a>
+        <a class="flex flex-col items-center justify-center bg-[#9e3d00] text-white rounded-full p-3 tap-highlight-transparent animate-pulse-subtle"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="restaurant_menu">restaurant_menu</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase">Menu</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#9e3d00] transition-colors tap-highlight-transparent"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="receipt_long">receipt_long</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase">Orders</span>
+        </a>
+        <a class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#9e3d00] transition-colors tap-highlight-transparent"
+            href="#">
+            <span class="material-symbols-outlined mb-1" data-icon="shopping_bag">shopping_bag</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase">Cart</span>
+        </a>
+    </nav>
+    <!-- Contextual FAB (Suppressing as per mandate for detailed menu screens, but keeping logic in mind) -->
+    <!-- Not rendered as this is a Details/Menu focused task where clarity is prioritized over floating actions -->
+</body>
+
+</html>
