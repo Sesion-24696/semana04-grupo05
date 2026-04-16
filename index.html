@@ -1,12 +1,309 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>La Sazon de Nicolasa</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>L'Essence - Fine Dining</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#b55d00",
+                        "surface-variant": "#e9e2d3",
+                        "surface": "#fff8ef",
+                        "on-surface-variant": "#594238",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#fffbff",
+                        "secondary": "#4e6073",
+                        "surface-container": "#f5edde",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed": "#091d2e",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed-variant": "#36485b",
+                        "secondary-fixed": "#d1e4fb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "surface-container-highest": "#e9e2d3",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1e1b13",
+                        "primary-container": "#c64f00",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1e1b13",
+                        "background": "#fff8ef",
+                        "primary-fixed-dim": "#ffb595",
+                        "surface-container-high": "#efe7d9",
+                        "on-primary-fixed": "#351000",
+                        "on-primary-fixed-variant": "#7c2e00",
+                        "surface-dim": "#e1d9cb",
+                        "inverse-surface": "#343026",
+                        "on-tertiary-container": "#fffbff",
+                        "outline": "#8c7166",
+                        "inverse-on-surface": "#f8f0e1",
+                        "primary-fixed": "#ffdbcd",
+                        "secondary-container": "#cfe2f9",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "tertiary": "#904800",
+                        "tertiary-fixed": "#ffdcc5",
+                        "on-secondary-container": "#526478",
+                        "inverse-primary": "#ffb595",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#b5c8df",
+                        "outline-variant": "#e0c0b2",
+                        "on-tertiary-fixed": "#301400",
+                        "primary": "#9e3d00",
+                        "surface-tint": "#a23f00",
+                        "surface-bright": "#fff8ef",
+                        "surface-container-low": "#fbf3e4",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Plus Jakarta Sans"],
+                        "label": ["Plus Jakarta Sans"]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .serif-text {
+            font-family: 'Noto Serif', serif;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
 </head>
-<body>
-    
+
+<body class="bg-surface text-on-surface">
+    <!-- TopAppBar -->
+    <header
+        class="w-full top-0 sticky z-50 bg-[#fff8ef] dark:bg-stone-950 flex justify-between items-center px-6 py-4 w-full">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full overflow-hidden">
+                <img alt="User profile photo" class="w-full h-full object-cover"
+                    data-alt="close-up portrait of a professional woman in elegant attire with a warm, welcoming expression, soft focus restaurant background"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuASHKht4pH6qUs_2Zxa9VfNyDv4rNAZPeQjilsrWshdZeB8f2GgUqCeR0vKbVfdgHX7t_EcSLmunqQeHDPhbO_xf7t7qSrx4Oh_yKhPXEolH8UlMdkyeB0-CJnSTdnJ8YhyQ57BOxUv0RnGXfF1U05Wupq1CfG-TSZ0LykCIByJTc8i4YixOM2QWmwRN6QXVdzL13AC-xM6hShuz0sHKtq6v7Fnyi6tAJ_XeYAYF0gakftUWYhyba7yek_95l6OrHK0KLwAtt5zTXLL" />
+            </div>
+        </div>
+        <h1 class="text-2xl font-bold italic text-[#9e3d00] dark:text-orange-400 serif-text">L'Essence</h1>
+        <button class="text-[#9e3d00] dark:text-orange-500 hover:opacity-80 transition-opacity">
+            <span class="material-symbols-outlined" data-icon="search">search</span>
+        </button>
+    </header>
+    <main class="pb-32">
+        <!-- Hero Section -->
+        <section class="relative w-full h-[574px] overflow-hidden">
+            <img alt="Signature Dish" class="w-full h-full object-cover"
+                data-alt="gourmet plated dish with seared scallops and microgreens on a minimalist ceramic plate, dramatic warm lighting, high-end culinary presentation"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfjdZlvlpivhWZkhVZ9xbGXvqSWIsYTfqXq_f2mqELUcUKNdYzUWxDHiICwhumT2xoQegCBJQ86hj0syXZ3g6qBdOPBhEK1A2kps5bi91TeEQdnNhZSnKxD1uHVCChAsSag5-80Td-NEhYJChPw1K6R8-JpZbA21HAyUUDUHXaUMX2DRkmFTTNKVjmbF06UItWGCYslP5LAVq3AaK72VxMoQDmaNJDD-CBngbQ1a0gbuYIQjG5_gfgEUl1AycNLcNK58cV9UyCtcpD" />
+            <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90">
+            </div>
+            <div class="absolute bottom-0 left-0 p-8 w-full">
+                <div
+                    class="inline-block px-3 py-1 mb-4 rounded-md bg-primary/10 backdrop-blur-md text-primary font-bold text-xs uppercase tracking-widest">
+                    Signature Creation
+                </div>
+                <h2 class="text-4xl md:text-5xl serif-text font-bold leading-tight mb-2 max-w-lg text-on-background">
+                    The Golden Harvest Risotto
+                </h2>
+                <p class="text-on-surface-variant max-w-md font-medium text-sm md:text-base">
+                    Savor the seasonal depth of hand-harvested mushrooms and 24-month aged parmesan.
+                </p>
+                <div class="mt-8 flex gap-4">
+                    <button
+                        class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-3.5 rounded-full font-bold shadow-xl shadow-primary/20 hover:opacity-90 transition-all active:scale-95">
+                        Order Now
+                    </button>
+                    <button
+                        class="bg-surface-container-highest/80 backdrop-blur-md text-on-surface px-8 py-3.5 rounded-full font-bold hover:bg-surface-container-highest transition-all active:scale-95">
+                        Explore Menu
+                    </button>
+                </div>
+            </div>
+        </section>
+        <!-- Welcome & Story -->
+        <section class="px-8 py-12">
+            <div class="flex flex-col items-center text-center">
+                <span class="text-primary-container serif-text italic text-lg mb-2">Welcome back, Alexandra</span>
+                <div class="w-12 h-px bg-outline-variant/30 mb-6"></div>
+                <p class="text-on-surface-variant font-light italic leading-relaxed max-w-sm">
+                    "Gastronomy is the art of using food to create happiness."
+                </p>
+            </div>
+        </section>
+        <!-- Recommended For You (Horizontal Scroll) -->
+        <section class="mb-12">
+            <div class="px-8 flex justify-between items-end mb-6">
+                <div>
+                    <h3 class="text-2xl serif-text font-bold text-on-surface">Recommended for you</h3>
+                    <p class="text-on-surface-variant text-sm font-medium">Curated based on your preferences</p>
+                </div>
+                <button class="text-primary text-sm font-bold tracking-tight hover:underline transition-all">View
+                    All</button>
+            </div>
+            <div class="flex overflow-x-auto gap-6 px-8 hide-scrollbar pb-6">
+                <!-- Item 1 -->
+                <div class="min-w-[280px] group">
+                    <div
+                        class="relative h-[360px] rounded-xl overflow-hidden bg-surface-container-low mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
+                        <img alt="Truffle Tagliatelle"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Close up of fresh tagliatelle pasta with shaved black truffles, creamy sauce, and parsley, soft cinematic lighting"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmCJIALbkuazN-U1NZKfRMtLchXdZlRi9R9lF28RP-Bjbz_dbwvCHYsuGKDv-YL9AuhMuSVxuztOVxaA8fIjan8yYNM93FNAdWMWNVDL_VxSzg9yily9xU7h2oq07VXm4RZRoSfybahjcHSF2UcWsZuipMTTC2tATTBmk5Up2QgSvewB5jm_phBcNsM5v70ukHJ2DMnlLWsC7dscB7NRmrxegsAAzCTlqihf8451W9KvB-EqOrhaFgnT-8QQsZG4q8AH4d6NSdQSrQ" />
+                        <div
+                            class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-2 py-1 rounded text-primary font-bold text-sm">
+                            $34
+                        </div>
+                        <!-- Glassmorphic Overlay "Chef's Note" -->
+                        <div
+                            class="absolute bottom-4 left-4 right-4 bg-surface/80 backdrop-blur-xl p-4 rounded-xl border border-white/20">
+                            <div class="flex items-center gap-2 mb-1">
+                                <span class="material-symbols-outlined text-xs text-primary"
+                                    style="font-variation-settings: 'FILL' 1;">restaurant</span>
+                                <span
+                                    class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant">Chef's
+                                    Note</span>
+                            </div>
+                            <p class="text-xs italic text-on-surface line-clamp-2">"Pairs exquisitely with our 2018
+                                Estate Chardonnay."</p>
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-on-surface px-1">Black Truffle Tagliatelle</h4>
+                    <p class="text-sm text-on-surface-variant px-1">Handmade pasta, autumn truffle cream</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="min-w-[280px] group">
+                    <div
+                        class="relative h-[360px] rounded-xl overflow-hidden bg-surface-container-low mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
+                        <img alt="Pan-Seared Salmon"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Perfectly cooked salmon fillet with crispy skin, served with roasted seasonal vegetables and a citrus glaze, editorial food photography"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcOSdjE3xjlon9du_eRZd0ahDaYmVz6JPud841UKvVFw1-3NJaLjdQCKcqorwnINoeNcu0A77nVZFspVHpeCbkstqaWd9rbbIXYWGYuPcyCCxq7pHE2x5ktNde24Ng77vLo0_I6RdO6MrPU8_wbaZJrZ_1Mnk7PUX4MVDGTokbSTDpHvARlJS07-wyJgvg1BIM1t3FmH7vHhfgc1IH0xS0Nl9_VQ_Ajz4DRph6xa_8BHSlhU5tI8_k-34W2vAnow5-CXkRY2ApGlmr" />
+                        <div
+                            class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-2 py-1 rounded text-primary font-bold text-sm">
+                            $42
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-on-surface px-1">Artisan Salmon</h4>
+                    <p class="text-sm text-on-surface-variant px-1">Wild-caught, citrus glaze, baby leeks</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="min-w-[280px] group">
+                    <div
+                        class="relative h-[360px] rounded-xl overflow-hidden bg-surface-container-low mb-4 shadow-sm group-hover:shadow-xl transition-shadow duration-500">
+                        <img alt="Garden Salad"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                            data-alt="Artisanal salad with heirloom tomatoes, burrata cheese, and balsamic reduction, vibrant colors, natural sunlight"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgD0DXWsZv5339pCbh70Z7wz55xEYNQgtOTWW-ORvAdmynMOXMGsEx-tfXbpVd31GR6iQPalRiw32cxIz7x4mELrzmC0SoXVWbyC31LIoC8zcsXaBSNUgagBCRRO2vM4uwwvPdXTjJPf2h6lsULJ03ZUTsEwwhuzBRcOELo4VVqWflYobEXuIPhNPanZ8ne-3XnOjPSmaPBjd68AdzBlXxFTJYCO5pk_S9-C7ypOisDunIcyPtfx1fmyjdmxGN_LO7S_2XrOgvtMb_" />
+                        <div
+                            class="absolute top-4 right-4 bg-surface/90 backdrop-blur px-2 py-1 rounded text-primary font-bold text-sm">
+                            $28
+                        </div>
+                    </div>
+                    <h4 class="text-lg font-bold text-on-surface px-1">Heirloom Burrata</h4>
+                    <p class="text-sm text-on-surface-variant px-1">Garden tomatoes, basil oil, aged balsamic</p>
+                </div>
+            </div>
+        </section>
+        <!-- Taste Profile (Bento-ish Grid) -->
+        <section class="px-8 pb-12">
+            <h3 class="text-xl serif-text font-bold mb-6 text-on-surface">Explore by Palate</h3>
+            <div class="grid grid-cols-2 gap-4 h-[400px]">
+                <div
+                    class="bg-surface-container-low rounded-2xl flex flex-col justify-end p-6 relative overflow-hidden group">
+                    <img alt="Cocktails"
+                        class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-1000"
+                        data-alt="Artisanal cocktails with ice and garnish in elegant glassware, dark moody atmospheric lighting"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBelJUK5ZHOzN1uqKxaYz1XYUsKXVZSgX-tx69-5IgM56q-HT8utYVTAukXp3VtnR0VyilGVS0MeDKSY9JPC_mZ5shnbtBrRoCaNtqDYSzWVW-gwP_2PXJLcr84TTtVGZ4nGFKjbej9-ohLbcAkIB59rwSoxMCXSfWlSdEF05tNWJXcMRUVT2DWGRaTtRKbJL5wp8zDqm0zZ12QRY0F_WGcNfcrnULs86qHKAD_XLWEFyB7C3eSIAdoKL5qGcuhRGShtIRjs76czEYf" />
+                    <div class="relative z-10">
+                        <span class="text-primary font-bold text-xs uppercase tracking-tighter">Mixology</span>
+                        <h4 class="text-xl font-bold serif-text">The Cellar</h4>
+                    </div>
+                </div>
+                <div class="grid grid-rows-2 gap-4">
+                    <div class="bg-surface-container-high rounded-2xl p-6 flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-primary"
+                            style="font-variation-settings: 'FILL' 1;">eco</span>
+                        <h4 class="font-bold text-lg leading-tight">Plant-Based Luxury</h4>
+                    </div>
+                    <div class="bg-primary/5 rounded-2xl p-6 flex flex-col justify-between">
+                        <span class="material-symbols-outlined text-primary"
+                            style="font-variation-settings: 'FILL' 1;">cake</span>
+                        <h4 class="font-bold text-lg leading-tight">Pastry Studio</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+        class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-[#fff8ef]/80 dark:bg-stone-900/80 backdrop-blur-xl shadow-[0_-8px_30px_rgba(30,27,19,0.06)] rounded-t-3xl">
+        <!-- Home (Active) -->
+        <div
+            class="flex flex-col items-center justify-center bg-[#9e3d00] text-white rounded-full p-3 transition-colors active:duration-150 scale-95">
+            <span class="material-symbols-outlined" data-icon="home"
+                style="font-variation-settings: 'FILL' 1;">home</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase mt-1">Home</span>
+        </div>
+        <!-- Menu -->
+        <div
+            class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#9e3d00] transition-colors">
+            <span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase mt-1">Menu</span>
+        </div>
+        <!-- Orders -->
+        <div
+            class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#9e3d00] transition-colors">
+            <span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase mt-1">Orders</span>
+        </div>
+        <!-- Cart -->
+        <div
+            class="flex flex-col items-center justify-center text-stone-500 dark:text-stone-400 p-3 hover:text-[#9e3d00] transition-colors">
+            <span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+            <span class="text-[11px] font-medium tracking-wide uppercase mt-1">Cart</span>
+        </div>
+    </nav>
 </body>
+
 </html>
